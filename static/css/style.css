@@ -6,16 +6,17 @@ h2 {
 }
 /* change of color and font size for the first two paragraphs */
 p {color: aqua;
-    font-size: 0.5em;
+    font-size: 1em;
+    font-weight: normal;
 }
 /* rule using a class */
-h1.yellow-background {
-    background-color: yellow;
-    padding: 40px;
+h1.grey-background {
+    background-color: gray;
+    padding: 30px;
 }
 /* change the color and font for the third paragraph */
 p#third-one {
-    color: beige;
+    color: blue;
     font-size: 2em;
 }
 img.logo {
