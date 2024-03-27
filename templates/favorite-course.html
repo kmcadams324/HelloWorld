@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block page_title %}Contact{% endblock %}
+
+{% block page_head %}Contact Me{% endblock %}
+
+{% block page_content %}
+
+You entered your favorite course as {{ request.args.get('course_subject') }} {{ request.args.get('course_number') }}
+
+{% endblock %}
