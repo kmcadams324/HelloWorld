@@ -34,7 +34,7 @@
         <br>{{ student['first_name'] }}
     {% endif %}
   </div>
-  <div class="col-md-4">
+ <div class="col-md-4">
     <label for="last_name" class="form-label"><strong>Last Name</strong></label>
     {% if action and action in ['create', 'update'] %}
     <input type="text" class="form-control" id="last_name" name="last_name" value="{{ student['last_name'] if student else '' }}" required>
@@ -68,7 +68,14 @@
         {% endfor %}
     {% endif %}
   </div>
-
+   <div class="col-md-4">
+    <label for="email" class="form-label"><strong>Email</strong></label>
+    {% if action and action in ['create', 'update'] %}
+    <input type="email" class="form-control" id="email" name="email" value="{{ student['email'] if student else '' }}" required>
+    {% else %}
+        <br>{{ student['email'] }}
+    {% endif %}
+  </div>
   {% if action and action in ['read', 'update'] %}
   <div class="col-md-4">
     <label for="num_credits_completed" class="form-label"><strong>Number of Credits Completed</strong></label>
@@ -102,7 +109,6 @@
             <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
             {% endif %}
       </label>
-  </div>
 
 
   </div>
