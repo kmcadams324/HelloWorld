@@ -16,6 +16,7 @@ with app.app_context():
         db.session.commit()
 
     # Initial loading of users
+    # added the user information for myself
     users = [
         {'username': 'kmcadam1', 'email': 'kmcadam1@terpmail.umd.edu', 'first_name': 'Kevin', 'last_name': 'McAdams',
          'password': generate_password_hash('kmcadam1', method='pbkdf2:sha256'), 'role': 'STUDENT'},
